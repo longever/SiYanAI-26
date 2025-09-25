@@ -1,0 +1,238 @@
+
+[
+  {
+    "_id": "task_001",
+    "task_id": "wan2_2_s2v_20240923120001",
+    "prompt": "欢迎来到我们的数字人演示平台！今天我将为您展示最新的AI技术如何改变内容创作方式。",
+    "voice_url": "https://example.com/audio/male-deep-voice.mp3",
+    "avatar_url": "https://example.com/avatars/business-male.jpg",
+    "resolution": "1080P",
+    "duration": 30,
+    "video_url": "https://example.com/videos/digital_human_demo_001.mp4",
+    "status": "COMPLETED",
+    "api_response": {
+      "output": {
+        "task_id": "wan2_2_s2v_20240923120001",
+        "task_status": "SUCCEEDED",
+        "video_url": "https://example.com/videos/digital_human_demo_001.mp4",
+        "duration": 30,
+        "resolution": "1920x1080"
+      },
+      "usage": {
+        "video_duration": 30,
+        "image_count": 1,
+        "audio_duration": 30
+      }
+    },
+    "error_message": "",
+    "retry_count": 0,
+    "generation_params": {
+      "model": "wanx2.1",
+      "input": {
+        "prompt": "欢迎来到我们的数字人演示平台！今天我将为您展示最新的AI技术如何改变内容创作方式。",
+        "avatar_image": "https://example.com/avatars/business-male.jpg",
+        "voice_audio": "https://example.com/audio/male-deep-voice.mp3",
+        "resolution": "1920x1080",
+        "duration": 30,
+        "fps": 30
+      },
+      "parameters": {
+        "seed": 12345,
+        "cfg_scale": 7.5,
+        "motion_strength": 0.8
+      }
+    },
+    "callback_url": "https://example.com/webhook/digital-human",
+    "estimated_time": 180,
+    "progress": 100,
+    "createdAt": 1727068800000,
+    "updatedAt": 1727069100000,
+    "owner": "user_001",
+    "createBy": "user_001",
+    "updateBy": "user_001"
+  },
+  {
+    "_id": "task_002",
+    "task_id": "wan2_2_s2v_20240923153002",
+    "prompt": "大家好，我是AI教育助手。今天我们来学习如何快速掌握一门新技能。",
+    "voice_url": "https://example.com/audio/female-warm-voice.mp3",
+    "avatar_url": "https://example.com/avatars/education-female.jpg",
+    "resolution": "720P",
+    "duration": 45,
+    "video_url": "",
+    "status": "PROCESSING",
+    "api_response": {
+      "output": {
+        "task_id": "wan2_2_s2v_20240923153002",
+        "task_status": "PROCESSING",
+        "progress": 65
+      }
+    },
+    "error_message": "",
+    "retry_count": 0,
+    "generation_params": {
+      "model": "wanx2.1",
+      "input": {
+        "prompt": "大家好，我是AI教育助手。今天我们来学习如何快速掌握一门新技能。",
+        "avatar_image": "https://example.com/avatars/education-female.jpg",
+        "voice_audio": "https://example.com/audio/female-warm-voice.mp3",
+        "resolution": "1280x720",
+        "duration": 45,
+        "fps": 25
+      },
+      "parameters": {
+        "seed": 67890,
+        "cfg_scale": 7.0,
+        "motion_strength": 0.7
+      }
+    },
+    "callback_url": "https://example.com/webhook/digital-human",
+    "estimated_time": 270,
+    "progress": 65,
+    "createdAt": 1727082600000,
+    "updatedAt": 1727083200000,
+    "owner": "user_002",
+    "createBy": "user_002",
+    "updateBy": "user_002"
+  },
+  {
+    "_id": "task_003",
+    "task_id": "wan2_2_s2v_20240923180003",
+    "prompt": "数字人直播带货演示：今天我们为大家带来一款革命性的智能家居产品。",
+    "voice_url": "https://example.com/audio/entertainer-voice.mp3",
+    "avatar_url": "https://example.com/avatars/entertainer.jpg",
+    "resolution": "4K",
+    "duration": 90,
+    "video_url": "",
+    "status": "PENDING",
+    "api_response": {
+      "output": {
+        "task_id": "wan2_2_s2v_20240923180003",
+        "task_status": "PENDING"
+      }
+    },
+    "error_message": "",
+    "retry_count": 0,
+    "generation_params": {
+      "model": "wanx2.1",
+      "input": {
+        "prompt": "数字人直播带货演示：今天我们为大家带来一款革命性的智能家居产品。",
+        "avatar_image": "https://example.com/avatars/entertainer.jpg",
+        "voice_audio": "https://example.com/audio/entertainer-voice.mp3",
+        "resolution": "3840x2160",
+        "duration": 90,
+        "fps": 60
+      },
+      "parameters": {
+        "seed": 11111,
+        "cfg_scale": 8.0,
+        "motion_strength": 0.9
+      }
+    },
+    "callback_url": "https://example.com/webhook/digital-human",
+    "estimated_time": 540,
+    "progress": 0,
+    "createdAt": 1727092800000,
+    "updatedAt": 1727093100000,
+    "owner": "user_003",
+    "createBy": "user_003",
+    "updateBy": "user_003"
+  },
+  {
+    "_id": "task_004",
+    "task_id": "wan2_2_s2v_20240923190004",
+    "prompt": "这是一个失败的测试案例，用于展示错误处理。",
+    "voice_url": "https://example.com/audio/invalid-voice.mp3",
+    "avatar_url": "https://example.com/avatars/invalid-avatar.jpg",
+    "resolution": "1080P",
+    "duration": 30,
+    "video_url": "",
+    "status": "FAILED",
+    "api_response": {
+      "output": {
+        "task_id": "wan2_2_s2v_20240923190004",
+        "task_status": "FAILED",
+        "error_code": "INVALID_INPUT",
+        "error_message": "音频文件格式不支持，请上传WAV或MP3格式的音频文件"
+      }
+    },
+    "error_message": "音频文件格式不支持，请上传WAV或MP3格式的音频文件",
+    "retry_count": 2,
+    "generation_params": {
+      "model": "wanx2.1",
+      "input": {
+        "prompt": "这是一个失败的测试案例，用于展示错误处理。",
+        "avatar_image": "https://example.com/avatars/invalid-avatar.jpg",
+        "voice_audio": "https://example.com/audio/invalid-voice.mp3",
+        "resolution": "1920x1080",
+        "duration": 30,
+        "fps": 30
+      },
+      "parameters": {
+        "seed": 22222,
+        "cfg_scale": 7.5,
+        "motion_strength": 0.8
+      }
+    },
+    "callback_url": "https://example.com/webhook/digital-human",
+    "estimated_time": 180,
+    "progress": 0,
+    "createdAt": 1727096400000,
+    "updatedAt": 1727096700000,
+    "owner": "user_004",
+    "createBy": "user_004",
+    "updateBy": "user_004"
+  },
+  {
+    "_id": "task_005",
+    "task_id": "wan2_2_s2v_20240923200005",
+    "prompt": "企业宣传数字人：我们是一家专注于AI技术研发的创新公司，致力于为客户提供最先进的解决方案。",
+    "voice_url": "https://example.com/audio/professional-voice.mp3",
+    "avatar_url": "https://example.com/avatars/ceo-avatar.jpg",
+    "resolution": "1080P",
+    "duration": 60,
+    "video_url": "https://example.com/videos/corporate_promo_005.mp4",
+    "status": "COMPLETED",
+    "api_response": {
+      "output": {
+        "task_id": "wan2_2_s2v_20240923200005",
+        "task_status": "SUCCEEDED",
+        "video_url": "https://example.com/videos/corporate_promo_005.mp4",
+        "duration": 60,
+        "resolution": "1920x1080"
+      },
+      "usage": {
+        "video_duration": 60,
+        "image_count": 1,
+        "audio_duration": 60
+      }
+    },
+    "error_message": "",
+    "retry_count": 0,
+    "generation_params": {
+      "model": "wanx2.1",
+      "input": {
+        "prompt": "企业宣传数字人：我们是一家专注于AI技术研发的创新公司，致力于为客户提供最先进的解决方案。",
+        "avatar_image": "https://example.com/avatars/ceo-avatar.jpg",
+        "voice_audio": "https://example.com/audio/professional-voice.mp3",
+        "resolution": "1920x1080",
+        "duration": 60,
+        "fps": 30
+      },
+      "parameters": {
+        "seed": 33333,
+        "cfg_scale": 7.5,
+        "motion_strength": 0.85
+      }
+    },
+    "callback_url": "https://example.com/webhook/digital-human",
+    "estimated_time": 360,
+    "progress": 100,
+    "createdAt": 1727100000000,
+    "updatedAt": 1727100900000,
+    "owner": "user_005",
+    "createBy": "user_005",
+    "updateBy": "user_005"
+  }
+]
+  

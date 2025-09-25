@@ -1,0 +1,128 @@
+
+{
+  "name": "digital_human_videos",
+  "title": "数字人视频生成记录（扩展版）",
+  "schemas": [
+    {
+      "name": "prompt",
+      "title": "视频文案",
+      "type": "MultiLineString"
+    },
+    {
+      "name": "voice_url",
+      "title": "声音素材URL",
+      "type": "Url"
+    },
+    {
+      "name": "voice_type",
+      "title": "声音类型",
+      "type": "String"
+    },
+    {
+      "name": "avatar_url",
+      "title": "形象素材URL",
+      "type": "Url"
+    },
+    {
+      "name": "avatar_type",
+      "title": "形象类型",
+      "type": "String"
+    },
+    {
+      "name": "resolution",
+      "title": "视频分辨率",
+      "type": "String"
+    },
+    {
+      "name": "aspect_ratio",
+      "title": "视频比例",
+      "type": "String"
+    },
+    {
+      "name": "duration",
+      "title": "视频时长(秒)",
+      "type": "Number"
+    },
+    {
+      "name": "fps",
+      "title": "帧率",
+      "type": "Number"
+    },
+    {
+      "name": "quality",
+      "title": "生成质量",
+      "type": "String"
+    },
+    {
+      "name": "video_url",
+      "title": "生成视频URL",
+      "type": "Url"
+    },
+    {
+      "name": "status",
+      "title": "任务状态",
+      "type": "String"
+    },
+    {
+      "name": "task_id",
+      "title": "本地任务ID",
+      "type": "String"
+    },
+    {
+      "name": "aliyun_task_id",
+      "title": "阿里云任务ID",
+      "type": "String"
+    },
+    {
+      "name": "seed",
+      "title": "随机种子",
+      "type": "Number"
+    },
+    {
+      "name": "generation_params",
+      "title": "生成参数",
+      "type": "Object"
+    },
+    {
+      "name": "callback_config",
+      "title": "回调配置",
+      "type": "Object"
+    },
+    {
+      "name": "estimated_time_seconds",
+      "title": "预计完成时间(秒)",
+      "type": "Number"
+    },
+    {
+      "name": "progress_details",
+      "title": "进度详情",
+      "type": "Object"
+    },
+    {
+      "name": "error_code",
+      "title": "错误代码",
+      "type": "String"
+    },
+    {
+      "name": "error_message",
+      "title": "错误信息",
+      "type": "String"
+    },
+    {
+      "name": "usage_stats",
+      "title": "使用统计",
+      "type": "Object"
+    },
+    {
+      "name": "retry_count",
+      "title": "重试次数",
+      "type": "Number"
+    },
+    {
+      "name": "created_from",
+      "title": "创建来源",
+      "type": "String"
+    }
+  ]
+}
+  

@@ -1,0 +1,83 @@
+
+{
+  "name": "aliyun_dashscope_jbn02va",
+  "title": "阿里云百炼API - 万相2.1数字人生成",
+  "schemas": [
+    {
+      "name": "task_id",
+      "title": "任务ID",
+      "type": "String"
+    },
+    {
+      "name": "prompt",
+      "title": "视频文案",
+      "type": "MultiLineString"
+    },
+    {
+      "name": "voice_url",
+      "title": "声音素材URL",
+      "type": "Url"
+    },
+    {
+      "name": "avatar_url",
+      "title": "形象素材URL",
+      "type": "Url"
+    },
+    {
+      "name": "resolution",
+      "title": "视频分辨率",
+      "type": "String"
+    },
+    {
+      "name": "duration",
+      "title": "视频时长(秒)",
+      "type": "Number"
+    },
+    {
+      "name": "video_url",
+      "title": "生成视频URL",
+      "type": "Url"
+    },
+    {
+      "name": "status",
+      "title": "任务状态",
+      "type": "String"
+    },
+    {
+      "name": "api_response",
+      "title": "API响应数据",
+      "type": "Object"
+    },
+    {
+      "name": "error_message",
+      "title": "错误信息",
+      "type": "String"
+    },
+    {
+      "name": "retry_count",
+      "title": "重试次数",
+      "type": "Number"
+    },
+    {
+      "name": "generation_params",
+      "title": "生成参数",
+      "type": "Object"
+    },
+    {
+      "name": "callback_url",
+      "title": "回调URL",
+      "type": "Url"
+    },
+    {
+      "name": "estimated_time",
+      "title": "预计完成时间(秒)",
+      "type": "Number"
+    },
+    {
+      "name": "progress",
+      "title": "进度百分比",
+      "type": "Number"
+    }
+  ]
+}
+  

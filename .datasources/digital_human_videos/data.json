@@ -1,0 +1,324 @@
+
+[
+  {
+    "_id": "dhv_001",
+    "prompt": "欢迎来到我们的数字人演示平台！今天我将为您展示最新的AI技术如何改变内容创作方式。通过简单的操作，您就可以创建属于自己的数字人形象，让内容创作变得更加高效和有趣。",
+    "voice_url": "https://example.com/audio/male-deep-voice.mp3",
+    "voice_type": "system",
+    "avatar_url": "https://example.com/avatars/business-male.jpg",
+    "avatar_type": "system",
+    "resolution": "1920x1080",
+    "aspect_ratio": "16:9",
+    "duration": 30,
+    "fps": 30,
+    "quality": "high",
+    "video_url": "https://example.com/videos/digital_human_demo_001.mp4",
+    "status": "completed",
+    "task_id": "local_task_20240923120001",
+    "aliyun_task_id": "wanx2.1_task_abc123xyz",
+    "seed": 12345,
+    "generation_params": {
+      "model": "wanx2.1",
+      "input": {
+        "prompt": "欢迎来到我们的数字人演示平台！今天我将为您展示最新的AI技术如何改变内容创作方式。",
+        "avatar_image": "https://example.com/avatars/business-male.jpg",
+        "voice_audio": "https://example.com/audio/male-deep-voice.mp3",
+        "resolution": "1920x1080",
+        "duration": 30,
+        "fps": 30
+      },
+      "parameters": {
+        "seed": 12345,
+        "cfg_scale": 7.5,
+        "motion_strength": 0.8,
+        "negative_prompt": "low quality, blurry"
+      }
+    },
+    "callback_config": {
+      "url": "https://example.com/webhook/digital-human",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer token123"
+      }
+    },
+    "estimated_time_seconds": 180,
+    "progress_details": {
+      "current_step": "completed",
+      "steps": [
+        {"name": "初始化", "status": "completed", "progress": 100},
+        {"name": "形象处理", "status": "completed", "progress": 100},
+        {"name": "音频处理", "status": "completed", "progress": 100},
+        {"name": "视频合成", "status": "completed", "progress": 100}
+      ],
+      "current_progress": 100
+    },
+    "error_code": "",
+    "error_message": "",
+    "usage_stats": {
+      "video_duration": 30,
+      "image_count": 1,
+      "audio_duration": 30,
+      "total_tokens": 150,
+      "cost_credits": 15
+    },
+    "retry_count": 0,
+    "created_from": "DigitalHumanPage",
+    "createdAt": 1727068800000,
+    "updatedAt": 1727069100000,
+    "owner": "user_001",
+    "createBy": "user_001",
+    "updateBy": "user_001"
+  },
+  {
+    "_id": "dhv_002",
+    "prompt": "大家好，我是AI教育助手。今天我们来学习如何快速掌握一门新技能。通过系统化的学习方法和持续的练习，任何人都可以在相对短的时间内获得显著的进步。",
+    "voice_url": "https://example.com/audio/female-warm-voice.mp3",
+    "voice_type": "system",
+    "avatar_url": "https://example.com/avatars/education-female.jpg",
+    "avatar_type": "system",
+    "resolution": "1280x720",
+    "aspect_ratio": "16:9",
+    "duration": 45,
+    "fps": 25,
+    "quality": "medium",
+    "video_url": "",
+    "status": "processing",
+    "task_id": "local_task_20240923153002",
+    "aliyun_task_id": "wanx2.1_task_def456uvw",
+    "seed": 67890,
+    "generation_params": {
+      "model": "wanx2.1",
+      "input": {
+        "prompt": "大家好，我是AI教育助手。今天我们来学习如何快速掌握一门新技能。",
+        "avatar_image": "https://example.com/avatars/education-female.jpg",
+        "voice_audio": "https://example.com/audio/female-warm-voice.mp3",
+        "resolution": "1280x720",
+        "duration": 45,
+        "fps": 25
+      },
+      "parameters": {
+        "seed": 67890,
+        "cfg_scale": 7.0,
+        "motion_strength": 0.7
+      }
+    },
+    "callback_config": {
+      "url": "https://example.com/webhook/digital-human",
+      "method": "POST"
+    },
+    "estimated_time_seconds": 270,
+    "progress_details": {
+      "current_step": "视频合成",
+      "steps": [
+        {"name": "初始化", "status": "completed", "progress": 100},
+        {"name": "形象处理", "status": "completed", "progress": 100},
+        {"name": "音频处理", "status": "completed", "progress": 100},
+        {"name": "视频合成", "status": "processing", "progress": 65}
+      ],
+      "current_progress": 65
+    },
+    "error_code": "",
+    "error_message": "",
+    "usage_stats": {
+      "estimated_cost": 22.5
+    },
+    "retry_count": 0,
+    "created_from": "DigitalHumanPage",
+    "createdAt": 1727082600000,
+    "updatedAt": 1727083200000,
+    "owner": "user_002",
+    "createBy": "user_002",
+    "updateBy": "user_002"
+  },
+  {
+    "_id": "dhv_003",
+    "prompt": "数字人直播带货演示：今天我们为大家带来一款革命性的智能家居产品。这款产品不仅拥有时尚的外观设计，更重要的是它能够通过AI学习您的生活习惯，为您提供个性化的智能服务。",
+    "voice_url": "https://example.com/uploads/user_voice_003.wav",
+    "voice_type": "upload",
+    "avatar_url": "https://example.com/uploads/user_avatar_003.jpg",
+    "avatar_type": "upload",
+    "resolution": "3840x2160",
+    "aspect_ratio": "16:9",
+    "duration": 90,
+    "fps": 60,
+    "quality": "ultra",
+    "video_url": "",
+    "status": "pending",
+    "task_id": "local_task_20240923180003",
+    "aliyun_task_id": "",
+    "seed": 11111,
+    "generation_params": {
+      "model": "wanx2.1",
+      "input": {
+        "prompt": "数字人直播带货演示：今天我们为大家带来一款革命性的智能家居产品。",
+        "avatar_image": "https://example.com/uploads/user_avatar_003.jpg",
+        "voice_audio": "https://example.com/uploads/user_voice_003.wav",
+        "resolution": "3840x2160",
+        "duration": 90,
+        "fps": 60
+      },
+      "parameters": {
+        "seed": 11111,
+        "cfg_scale": 8.0,
+        "motion_strength": 0.9,
+        "negative_prompt": "low quality, blurry, distorted"
+      }
+    },
+    "callback_config": {
+      "url": "https://example.com/webhook/digital-human",
+      "method": "POST"
+    },
+    "estimated_time_seconds": 540,
+    "progress_details": {
+      "current_step": "等待处理",
+      "steps": [
+        {"name": "初始化", "status": "pending", "progress": 0},
+        {"name": "形象处理", "status": "pending", "progress": 0},
+        {"name": "音频处理", "status": "pending", "progress": 0},
+        {"name": "视频合成", "status": "pending", "progress": 0}
+      ],
+      "current_progress": 0
+    },
+    "error_code": "",
+    "error_message": "",
+    "usage_stats": {
+      "estimated_cost": 45
+    },
+    "retry_count": 0,
+    "created_from": "DigitalHumanPage",
+    "createdAt": 1727092800000,
+    "updatedAt": 1727093100000,
+    "owner": "user_003",
+    "createBy": "user_003",
+    "updateBy": "user_003"
+  },
+  {
+    "_id": "dhv_004",
+    "prompt": "这是一个失败的测试案例，用于展示错误处理。",
+    "voice_url": "https://example.com/audio/invalid-voice.mp3",
+    "voice_type": "upload",
+    "avatar_url": "https://example.com/uploads/invalid-avatar.jpg",
+    "avatar_type": "upload",
+    "resolution": "1920x1080",
+    "aspect_ratio": "16:9",
+    "duration": 30,
+    "fps": 30,
+    "quality": "high",
+    "video_url": "",
+    "status": "failed",
+    "task_id": "local_task_20240923190004",
+    "aliyun_task_id": "wanx2.1_task_error789",
+    "seed": 22222,
+    "generation_params": {
+      "model": "wanx2.1",
+      "input": {
+        "prompt": "这是一个失败的测试案例，用于展示错误处理。",
+        "avatar_image": "https://example.com/uploads/invalid-avatar.jpg",
+        "voice_audio": "https://example.com/audio/invalid-voice.mp3",
+        "resolution": "1920x1080",
+        "duration": 30,
+        "fps": 30
+      },
+      "parameters": {
+        "seed": 22222,
+        "cfg_scale": 7.5,
+        "motion_strength": 0.8
+      }
+    },
+    "callback_config": {
+      "url": "https://example.com/webhook/digital-human"
+    },
+    "estimated_time_seconds": 0,
+    "progress_details": {
+      "current_step": "failed",
+      "steps": [
+        {"name": "初始化", "status": "failed", "progress": 0}
+      ],
+      "current_progress": 0
+    },
+    "error_code": "INVALID_AUDIO_FORMAT",
+    "error_message": "音频文件格式不支持，请上传WAV或MP3格式的音频文件",
+    "usage_stats": {
+      "cost_credits": 0
+    },
+    "retry_count": 2,
+    "created_from": "DigitalHumanPage",
+    "createdAt": 1727096400000,
+    "updatedAt": 1727096700000,
+    "owner": "user_004",
+    "createBy": "user_004",
+    "updateBy": "user_004"
+  },
+  {
+    "_id": "dhv_005",
+    "prompt": "企业宣传数字人：我们是一家专注于AI技术研发的创新公司，致力于为客户提供最先进的解决方案。通过持续的技术创新和优质的服务，我们已经帮助数千家企业实现了数字化转型。",
+    "voice_url": "https://example.com/audio/professional-voice.mp3",
+    "voice_type": "system",
+    "avatar_url": "https://example.com/avatars/ceo-avatar.jpg",
+    "avatar_type": "system",
+    "resolution": "1920x1080",
+    "aspect_ratio": "16:9",
+    "duration": 60,
+    "fps": 30,
+    "quality": "high",
+    "video_url": "https://example.com/videos/corporate_promo_005.mp4",
+    "status": "completed",
+    "task_id": "local_task_20240923200005",
+    "aliyun_task_id": "wanx2.1_task_promo567",
+    "seed": 33333,
+    "generation_params": {
+      "model": "wanx2.1",
+      "input": {
+        "prompt": "企业宣传数字人：我们是一家专注于AI技术研发的创新公司...",
+        "avatar_image": "https://example.com/avatars/ceo-avatar.jpg",
+        "voice_audio": "https://example.com/audio/professional-voice.mp3",
+        "resolution": "1920x1080",
+        "duration": 60,
+        "fps": 30
+      },
+      "parameters": {
+        "seed": 33333,
+        "cfg_scale": 7.5,
+        "motion_strength": 0.85,
+        "negative_prompt": "low quality, blurry, watermark"
+      }
+    },
+    "callback_config": {
+      "url": "https://example.com/webhook/digital-human",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer token456"
+      }
+    },
+    "estimated_time_seconds": 360,
+    "progress_details": {
+      "current_step": "completed",
+      "steps": [
+        {"name": "初始化", "status": "completed", "progress": 100},
+        {"name": "形象处理", "status": "completed", "progress": 100},
+        {"name": "音频处理", "status": "completed", "progress": 100},
+        {"name": "视频合成", "status": "completed", "progress": 100},
+        {"name": "后期处理", "status": "completed", "progress": 100}
+      ],
+      "current_progress": 100
+    },
+    "error_code": "",
+    "error_message": "",
+    "usage_stats": {
+      "video_duration": 60,
+      "image_count": 1,
+      "audio_duration": 60,
+      "total_tokens": 280,
+      "cost_credits": 30,
+      "processing_time": 320
+    },
+    "retry_count": 0,
+    "created_from": "DigitalHumanPage",
+    "createdAt": 1727100000000,
+    "updatedAt": 1727100900000,
+    "owner": "user_005",
+    "createBy": "user_005",
+    "updateBy": "user_005"
+  }
+]
+  
