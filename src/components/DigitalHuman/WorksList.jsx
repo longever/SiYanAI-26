@@ -5,8 +5,21 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, Button } fro
 // @ts-ignore;
 import { Play, Download, Trash2, RefreshCw } from 'lucide-react';
 
-import { formatDistanceToNow } from 'date-fns';
-import { zhCN } from 'date-fns/locale';
+// 移除 date-fns 依赖，使用原生 Date 实现
+function formatRelativeTime(date) {
+  const now = new Date();
+  const target = new Date(date);
+  const diffMs = now - target;
+  const diffSec = Math.floor(diffMs / 1000);
+  const diffMin = Math.floor(diffSec / 60);
+  const diffHour = Math.floor(diffMin / 60);
+  const diffDay = Math.floor(diffHour / 24);
+  if (diffSec < 60) return '刚刚';
+  if (diffMin < 60) return `${diffMin}分钟前`;
+  if (diffHour < 24) return `${diffHour}小时前`;
+  if (diffDay < 30) return `${diffDay}天前`;
+  return target.toLocaleDateString('zh-CN');
+}
 export function WorksList({
   works = [],
   onRefresh
@@ -75,10 +88,7 @@ export function WorksList({
             <CardContent>
               <div className="flex justify-between items-center">
                 <span className="text-xs text-gray-500">
-                  {work.createdAt ? formatDistanceToNow(new Date(work.createdAt), {
-                locale: zhCN,
-                addSuffix: true
-              }) : '刚刚'}
+                  {work.createdAt ? formatRelativeTime(work.createdAt) : '刚刚'}
                 </span>
                 <div className="flex gap-2">
                   <Button size="sm" variant="ghost" onClick={() => handlePlay(work)} disabled={work.status !== 'completed'}>
