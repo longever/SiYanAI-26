@@ -1,5 +1,5 @@
 // @ts-ignore;
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // @ts-ignore;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, Button, Tabs, TabsContent, TabsList, TabsTrigger, useToast } from '@/components/ui';
 
@@ -10,6 +10,7 @@ import { VideoSettings } from '@/components/DigitalHuman/VideoSettings';
 import { SystemSelector } from '@/components/DigitalHuman/SystemSelector';
 import { GenerationModal } from '@/components/DigitalHuman/GenerationModal';
 import { WorksList } from '@/components/DigitalHuman/WorksList';
+import { saveDigitalHumanVideo, getDigitalHumanVideos, updateDigitalHumanVideo } from '@/components/DigitalHuman/SaveToDatabase';
 export default function DigitalHumanPage(props) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
@@ -23,9 +24,29 @@ export default function DigitalHumanPage(props) {
   const [selectedSystem, setSelectedSystem] = useState('ali');
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedVideo, setGeneratedVideo] = useState(null);
+  const [works, setWorks] = useState([]);
+  const [currentTaskId, setCurrentTaskId] = useState(null);
   const {
     toast
   } = useToast();
+  const {
+    $w
+  } = props;
+  useEffect(() => {
+    loadWorks();
+  }, []);
+  const loadWorks = async () => {
+    try {
+      const result = await getDigitalHumanVideos($w);
+      setWorks(result.records || []);
+    } catch (error) {
+      toast({
+        title: "加载失败",
+        description: "无法加载作品列表",
+        variant: "destructive"
+      });
+    }
+  };
   const handleFileSelect = file => {
     setSelectedFile(file);
     setPreviewUrl(URL.createObjectURL(file));
@@ -43,21 +64,56 @@ export default function DigitalHumanPage(props) {
       });
       return;
     }
+    const taskId = `task_${Date.now()}`;
+    setCurrentTaskId(taskId);
     setIsGenerating(true);
     try {
+      // 创建初始记录
+      const saveData = {
+        prompt: "数字人视频生成任务",
+        voice_url: audioUrl,
+        voice_type: "uploaded",
+        avatar_url: previewUrl,
+        avatar_type: "uploaded",
+        resolution: settings.resolution,
+        aspect_ratio: "16:9",
+        duration: 10,
+        fps: settings.fps,
+        quality: settings.quality,
+        video_url: "",
+        status: "processing",
+        task_id: taskId,
+        created_from: "web"
+      };
+      await saveDigitalHumanVideo(saveData, $w);
+
       // 模拟生成过程
       await new Promise(resolve => setTimeout(resolve, 3000));
-      setGeneratedVideo({
-        id: Date.now(),
+
+      // 更新为完成状态
+      const videoData = {
+        id: taskId,
         url: 'https://example.com/generated-video.mp4',
         thumbnail: previewUrl,
         createdAt: new Date().toISOString()
-      });
+      };
+      await updateDigitalHumanVideo(taskId, {
+        video_url: videoData.url,
+        status: "completed"
+      }, $w);
+      setGeneratedVideo(videoData);
+      await loadWorks();
       toast({
         title: "生成成功",
         description: "数字人视频已生成完成"
       });
     } catch (error) {
+      if (currentTaskId) {
+        await updateDigitalHumanVideo(currentTaskId, {
+          status: "failed",
+          error_message: error.message
+        }, $w);
+      }
       toast({
         title: "生成失败",
         description: error.message,
@@ -65,6 +121,7 @@ export default function DigitalHumanPage(props) {
       });
     } finally {
       setIsGenerating(false);
+      setCurrentTaskId(null);
     }
   };
   return <div className="min-h-screen bg-gray-50 py-8">
@@ -146,7 +203,7 @@ export default function DigitalHumanPage(props) {
           </TabsContent>
 
           <TabsContent value="works">
-            <WorksList works={generatedVideo ? [generatedVideo] : []} />
+            <WorksList works={works} onRefresh={loadWorks} />
           </TabsContent>
         </Tabs>
 

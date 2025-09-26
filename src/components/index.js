@@ -15,3 +15,4 @@ export * from './DigitalHuman/SystemSelector.jsx';
 export * from './DigitalHuman/GenerationModal.jsx';
 export * from './DigitalHuman/WorksList.jsx';
 export * from './DigitalHuman/DigitalHumanAudioPlayer.jsx';
+export * from './DigitalHuman/SaveToDatabase.jsx';
